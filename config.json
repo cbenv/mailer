@@ -1,0 +1,18 @@
+{
+  "node": {
+    "host": "localhost",
+    "port": 8080,
+    "env": "development"
+  },
+  "mail": {
+    "smtp": {
+      "host": "mail.example.com",
+      "port": 465,
+      "secure": true,
+      "auth": {
+        "user": "user@example.com",
+        "pass": "password"
+      }
+    }
+  }
+}
