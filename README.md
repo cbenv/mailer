@@ -9,8 +9,7 @@ Configuration lives in `config.json`. The configuration follows the structure be
 {
   "node": {
     "host": "localhost",
-    "port": 8080,
-    "env": "development"
+    "port": 8080
   },
   "mail": {
     "smtp": {
@@ -49,6 +48,3 @@ Then call POST /email endpoint to send email. Please refer to a sample payload:
   "text": "I am glad this message finds you well."
 }
 ```
-
-
-

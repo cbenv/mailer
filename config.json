@@ -1,8 +1,7 @@
 {
   "node": {
     "host": "localhost",
-    "port": 8080,
-    "env": "development"
+    "port": 8080
   },
   "mail": {
     "smtp": {
