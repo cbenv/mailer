@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Simple and lightweight node server to send email via external SMTP server",
   "main": "dist/app.js",
-  "repository": "https://bitbucket.org/cbenv/mailer",
+  "repository": "https://github.com/cbenv/mailer",
   "author": {
     "name": "Christoforus Benvenuto",
     "email": "c@benv.me",
