@@ -1,35 +1,34 @@
 import * as http from 'http';
 import * as express from 'express'
 import * as bodyParser from 'body-parser';
-import * as nodemailer from 'nodemailer';
 
 import router from './server/router';
 
 class App {
   private config;
-  private http;
+  private httpServer;
 
   constructor() {
-    this.config = require('../config.json');
+    this.config = require('../config/development.json');
   }
 
   private configureServer() {
     const app = express();
-    const transport = nodemailer.createTransport(this.config.mail.smtp);
+    app.set('config', this.config);
     app.use(express.static(__dirname + '/client'));
     app.use(bodyParser.json());
-    app.use('/', router(transport));
-    this.http = http.createServer(app);
+    app.use('/', router());
+    this.httpServer = http.createServer(app);
   }
 
   public start() {
     const port = this.config.node.port;
     const host = this.config.node.host;
     this.configureServer();
-    this.http.listen(port, host);
+    this.httpServer.listen(port, host);
     console.log(`Application is running at ${host}:${port}`);
   }
 }
 
-var app = new App();
+const app = new App();
 app.start();

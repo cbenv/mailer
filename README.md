@@ -4,7 +4,7 @@ Simple and lightweight node server to send email via external SMTP server
 
 ## Configuration
 
-Configuration lives in `config.json`. The configuration follows the structure below.
+Configuration lives in `config/`. The configuration follows the structure below.
 ```
 {
   "node": {
