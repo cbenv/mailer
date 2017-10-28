@@ -22,8 +22,7 @@ class App {
   }
 
   public start() {
-    const port = this.config.node.port;
-    const host = this.config.node.host;
+    const {host, port} = this.config.node;
     this.configureServer();
     this.httpServer.listen(port, host);
     console.log(`Application is running at ${host}:${port}`);
